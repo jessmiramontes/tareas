@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obesity: - Model prediction</title>
+</head>
+<body>
+    <h2>Introduce the values below</h2>
+    
+    <form action="/" method="POST">
+        <div>
+          <label for="">gender</label>
+          <select id="" name="" required>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
+        </div>
+        <div>
+          <label for="age">age:</label>
+          <input type="number" id="age" name="age" required min="1" step="0.01">
+        </div>
+        <div>
+          <label for="height">height:</label>
+          <input type="number" id="height" name="height" required step="0.01">
+        </div>
+        <div>
+          <label for="weight">weight:</label>
+          <input type="number" id="weight" name="weight" required step="0.01">
+        </div>
+        <div>
+          <label for="has_a_family_member_suffered_or_suffers_from_overw">Has a family member suffered or suffers from overweight?</label>
+          <select id="has_a_family_member_suffered_or_suffers_from_overw" name="has_a_family_member_suffered_or_suffers_from_overw" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="do_you_eat_high_caloric_food_frequently">Do you eat high caloric food frequently?</label>
+          <select id="do_you_eat_high_caloric_food_frequently" name="do_you_eat_high_caloric_food_frequently" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="do_you_usually_eat_vegetables_in_your_meals">Do you usually eat vegetables in your meals?</label>
+          <select id="do_you_usually_eat_vegetables_in_your_meals" name="do_you_usually_eat_vegetables_in_your_meals" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="how_many_main_meals_do_you_have_daily">How many main meals do you have daily?</label>
+          <input type="number" id="how_many_main_meals_do_you_have_daily" name="how_many_main_meals_do_you_have_daily" required step="0.01">
+        </div>
+        <div>
+          <label for="do_you_eat_any_food_between_meals">Do you eat any food between meals?</label>
+          <select id="do_you_eat_any_food_between_meals" name="do_you_eat_any_food_between_meals" required>
+            <option value="Frequently">Frequently</option>
+            <option value="no">no</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Always">Always</option>
+          </select>
+        </div>
+        <div>
+          <label for="do_you_smoke">Do you smoke?</label>
+          <select id="do_you_smoke" name="do_you_smoke" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="how_much_water_do_you_drink_daily">How much water do you drink daily?</label>
+          <input type="number" id="how_much_water_do_you_drink_daily" name="how_much_water_do_you_drink_daily" required step="0.01">
+        </div>
+        <div>
+          <label for="do_you_monitor_the_calories_you_eat_daily">Do you monitor the calories you eat daily?</label>
+          <select id="do_you_monitor_the_calories_you_eat_daily" name="do_you_monitor_the_calories_you_eat_daily" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="how_often_do_you_have_physical_activity">How often do you have physical activity?</label>
+          <input type="number" id="how_often_do_you_have_physical_activity" name="how_often_do_you_have_physical_activity" required step="0.01">
+        </div>
+        <div>
+          <label for="how_much_time_do_you_use_technological_devices_suc">How much time do you use technological devices such as cell phone, videogames, television, computer and others?</label>
+          <input type="number" id="how_much_time_do_you_use_technological_devices_suc" name="how_much_time_do_you_use_technological_devices_suc" required step="0.01">
+        </div>
+        <div>
+          <label for="how_often_do_you_drink_alcohol">How often do you drink alcohol?</label>
+          <select id="how_often_do_you_drink_alcohol" name="how_often_do_you_drink_alcohol" required>
+            <option value="Frequently">Frequently</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Always">Always</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+        <div>
+          <label for="which_transportation_do_you_usually_use">Which transportation do you usually use?</label>
+          <select id="which_transportation_do_you_usually_use" name="which_transportation_do_you_usually_use" required>
+            <option value="Public_Transportation">Public_Transportation</option>
+            <option value="Automobile">Automobile</option>
+            <option value="Waling">Walking</option>
+            <option value="Motorbike">Motorbike</option>
+            <option value="Bike">Bike</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    
+    {% if prediction != None %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
